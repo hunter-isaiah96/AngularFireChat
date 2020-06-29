@@ -1,0 +1,24 @@
+<div class="centered-container">
+  <mat-card class="mat-elevation-z5">
+    <form class="auth-form" [formGroup]="loginForm" (ngSubmit)="login()">
+      <h1>LOGIN</h1>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input formControlName="email" autocomplete="off" matInput required />
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input
+          formControlName="password"
+          autocomplete="off"
+          type="password"
+          matInput
+          required
+        />
+      </mat-form-field>
+      <br />
+      <button color="primary" mat-flat-button>Login</button>
+    </form>
+  </mat-card>
+</div>

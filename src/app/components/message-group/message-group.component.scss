@@ -1,0 +1,70 @@
+$backgroundColor: #26272b;
+$ownerColor: #4152c3;
+$nonOwnerColor: #ff8750;
+
+.messages {
+  margin-bottom: 40px;
+}
+
+.message:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.message-container {
+  flex: 1;
+}
+
+.message-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 25px;
+  background-color: $backgroundColor;
+  font-weight: 500;
+  &:after {
+    content: "";
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $ownerColor;
+  }
+}
+
+.owner {
+  text-align: right;
+  .message-wrapper:after {
+    left: unset;
+    right: 0;
+    background-color: $nonOwnerColor;
+  }
+}
+
+.message-image {
+  align-self: flex-end;
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.message-content {
+  display: inline-block;
+}
+
+.message-username {
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9em;
+}
+
+ul {
+  width: 100%;
+}
+
+.message-main {
+  display: flex;
+  width: 100%;
+}

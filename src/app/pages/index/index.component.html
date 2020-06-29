@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <mat-toolbar>
+    <span>Firestore Chat</span>
+    <div class="flex-1"></div>
+    <div mat-card-avatar class="example-header-image"></div>
+    <button (click)="logout()" mat-icon-button>
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </mat-toolbar>
+  <ul class="messages" #messageList>
+    <app-message-group
+      *ngFor="let message of messages | async"
+      [messages]="message.messages"
+      [uid]="message.user.uid"
+      [username]="message.user.username"
+    >
+    </app-message-group>
+  </ul>
+  <div class="text-box">
+    <form
+      class="message-form"
+      [formGroup]="messageForm"
+      (ngSubmit)="sendMessage()"
+    >
+      <mat-form-field class="message-box">
+        <mat-label>Type your message here</mat-label>
+        <input formControlName="message" autocomplete="off" matInput />
+      </mat-form-field>
+      <button
+        [disabled]="messageForm.get('message').value === ''"
+        mat-icon-button
+      >
+        <mat-icon>send</mat-icon>
+      </button>
+    </form>
+  </div>
+</div>

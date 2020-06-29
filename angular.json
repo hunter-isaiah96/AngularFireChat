@@ -121,8 +121,16 @@
               "devServerTarget": "simple-chat:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "simple-chat"
+    }
+  },
+  "defaultProject": "simple-chat",
+  "cli": {
+    "analytics": "8d6be533-d0fb-4fcf-8889-04d2312ff2cf"
+  }
 }

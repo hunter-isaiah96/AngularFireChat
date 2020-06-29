@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chatapp-17c32": {
+      "hosting": {
+        "simple-chat": [
+          "chatapp-17c32"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chatapp-17c32"
+  }
+}

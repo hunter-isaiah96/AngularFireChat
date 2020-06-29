@@ -1,0 +1,15 @@
+<li class="messages" [class.owner]="isOwner">
+  <ul>
+    <li class="message-main">
+      <div *ngIf="!isOwner" class="message-image"></div>
+      <div class="message-container">
+        <div *ngIf="!isOwner" class="message-username">{{ username }}</div>
+        <div *ngFor="let message of messages" class="message">
+          <div class="message-wrapper">
+            <div class="message-content">{{ message.content }}</div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</li>

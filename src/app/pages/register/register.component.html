@@ -1,0 +1,42 @@
+<div class="centered-container">
+  <mat-card class="mat-elevation-z5">
+    <form [formGroup]="registerForm" class="auth-form">
+      <h1>REGISTER</h1>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input formControlName="email" autocomplete="off" matInput />
+      </mat-form-field>
+      <!-- <app-form-errors [errors]="registerForm.get('email')"></app-form-errors> -->
+      <br />
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input
+          formControlName="password"
+          autocomplete="off"
+          type="password"
+          matInput
+        />
+      </mat-form-field>
+      <!-- <app-form-errors
+        [errors]="registerForm.get('password')"
+      ></app-form-errors> -->
+      <br />
+      <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input
+          formControlName="conf_password"
+          autocomplete="off"
+          type="password"
+          matInput
+        />
+      </mat-form-field>
+      <!-- <app-form-errors
+        [errors]="registerForm.get('conf_password')"
+      ></app-form-errors> -->
+      <br />
+      <button (click)="register()" color="primary" mat-flat-button>
+        Login
+      </button>
+    </form>
+  </mat-card>
+</div>
